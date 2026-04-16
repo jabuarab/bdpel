@@ -1,7 +1,9 @@
+from enum import unique
 from ydata_profiling import ProfileReport
 import pandas as pd
 import psycopg2
 import re
+import matplotlib.pyplot as plt
 
 conn_string = "postgresql://neondb_owner:npg_2F1ktmTIfnCW@ep-lingering-sky-akbzgff8.c-3.us-west-2.aws.neon.tech/BDpel?sslmode=require&channel_binding=require"
 conn = psycopg2.connect(conn_string)
@@ -25,7 +27,8 @@ def expression(valor):
     valor = re.sub(r"D+", r"\\d+", valor)
 
     return "^" + valor + "$"
- 
+
+
 conns_query = """SELECT
     tc.constraint_name,
     tc.constraint_type,
@@ -34,15 +37,26 @@ FROM information_schema.table_constraints tc
 LEFT JOIN information_schema.key_column_usage kcu
     ON tc.constraint_name = kcu.constraint_name
 WHERE tc.table_name = 'bdpel';"""
- 
-cursor.execute(conns_query)
-conns_results = cursor.fetchall()
+
+unique_query = """
+    SELECT
+    COUNT(*) AS total_filas,
+
+
+    COUNT(DISTINCT titulo) AS titulo_unicos,
+    COUNT(DISTINCT titulo) * 1.0 / COUNT(*) AS ratio_titulo_unicos
+FROM bdpel;"""
+
+
+columns = df.columns
+
+null_query = "SELECT\n"
 
 patrones_por_columna = {}
 
 for col in df.columns:
     patrones = set()
-
+    null_query += f"""    COUNT(*) FILTER (WHERE "{col}" IS NULL OR "{col}" = '') AS {col}_nulls,\n"""
     for val in df[col].dropna():
         regex = expression(val)
         patrones.add(regex)
@@ -57,10 +71,35 @@ for col, patrones in patrones_por_columna.items():
         for patron in patrones:
             print(f"  - {patron}")
 
+null_query = null_query.rstrip(",\n") + "\nFROM bdpel;"
 
- 
+
+cursor.execute(conns_query)
+conns_results = cursor.fetchall()
 
 print("Constraints:")
 print(conns_results)
+cursor.execute(null_query)
+nulls_results = cursor.fetchall()
+
+print("Nulls:")
+print(nulls_results)
+cursor.execute(unique_query)
+unique_results = cursor.fetchall()
+
+print("Tittulos unicos:")
+print(unique_results)
+
+
 cursor.close()
 conn.close()
+
+df["anoestreno"] = pd.to_numeric(df["anoestreno"], errors="coerce")
+
+# Boxplot
+df.boxplot(column="anoestreno")
+
+plt.title("Boxplot de anoestreno")
+
+# Guardar imagen
+plt.savefig("boxplot_anoestreno.png")

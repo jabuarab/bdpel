@@ -1,0 +1,56 @@
+ Columna: idpel
+Cantidad de expresiones: 1
+  - ^[a-zA-Z]+\d+$
+ Columna: titulo
+Cantidad de expresiones: 131
+ Columna: descripcion
+Cantidad de expresiones: 511
+ Columna: directores
+Cantidad de expresiones: 4
+  - ^[a-zA-Z]+!$
+  - ^[a-zA-Z]+’[a-zA-Z]+$
+  - ^[a-zA-Z]+\d+$
+  - ^[a-zA-Z]+$
+ Columna: actores
+Cantidad de expresiones: 23
+  - ^[a-zA-Z]+้[a-zA-Z]+$
+  - ^[a-zA-Z]+ș[a-zA-Z]+$
+  - ^[a-zA-Z]+’[a-zA-Z]+$
+  - ^Ṣọ[a-zA-Z]+ẹ́[a-zA-Z]+$
+  - ^[a-zA-Z]+️️$
+  - ^[a-zA-Z]+$$[a-zA-Z]+$
+  - ^[a-zA-Z]+ț[a-zA-Z]+$
+  - ^[a-zA-Z]+$
+  - ^[a-zA-Z]+_[a-zA-Z]+$
+  - ^[a-zA-Z]+$[a-zA-Z]+\d+[a-zA-Z]+\d+[a-zA-Z]+$
+  - ^[a-zA-Z]+’[a-zA-Z]+’[a-zA-Z]+$
+  - ^[a-zA-Z]+![a-zA-Z]+![a-zA-Z]+\d+[a-zA-Z]+$
+  - ^[a-zA-Z]+́[a-zA-Z]+́[a-zA-Z]+́[a-zA-Z]+́[a-zA-Z]+$
+  - ^[a-zA-Z]+\d+[a-zA-Z]+\d+[a-zA-Z]+$
+  - ^[a-zA-Z]+​[a-zA-Z]+$
+  - ^[a-zA-Z]+([a-zA-Z]+)[a-zA-Z]+$
+  - ^\d+[a-zA-Z]+\d+[a-zA-Z]+\d+[a-zA-Z]+\d+[a-zA-Z]+$
+  - ^[a-zA-Z]+\d+$
+  - ^\d+[a-zA-Z]+$
+  - ^[a-zA-Z]+‑[a-zA-Z]+$
+  - ^[a-zA-Z]+\d+[a-zA-Z]+$
+  - ^[a-zA-Z]+\d+[a-zA-Z]+\d+$
+  - ^[a-zA-Z]+・[a-zA-Z]+・[a-zA-Z]+$
+ Columna: generos
+Cantidad de expresiones: 3
+  - ^[]$
+  - ^[[a-zA-Z]+]$
+  - ^[a-zA-Z]+$
+ Columna: duracion
+Cantidad de expresiones: 2
+  - ^\d+$
+  - ^\d+[a-zA-Z]+$
+ Columna: anoestreno
+Cantidad de expresiones: 1
+  - ^\d+$
+Constraints:
+[('bdpel_pkey', 'PRIMARY KEY', 'idpel'), ('2200_49159_1_not_null', 'CHECK', None)]
+Nulls:
+[(0, 1, 18, 8440, 6631, 0, 3, 0)]
+Tittulos unicos:
+[(14613, 10408, Decimal('0.71224252378019571614'))]
