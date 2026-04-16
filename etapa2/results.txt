@@ -52,5 +52,7 @@ Constraints:
 [('bdpel_pkey', 'PRIMARY KEY', 'idpel'), ('2200_49159_1_not_null', 'CHECK', None)]
 Nulls:
 [(0, 1, 18, 8440, 6631, 0, 3, 0)]
+(idPel, titulo, descripcion, directores, actores, generos, duracion, anoEstreno) 
+
 Tittulos unicos:
 [(14613, 10408, Decimal('0.71224252378019571614'))]
