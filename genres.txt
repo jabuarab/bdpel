@@ -1,0 +1,114 @@
+id,category,genre
+1,main,Action
+2,main,Adventure
+3,main,Comedy
+4,main,Drama
+5,main,Horror
+6,main,Science Fiction
+7,main,Fantasy
+8,main,Romance
+9,main,Thriller
+10,main,Crime
+11,main,Mystery
+12,main,Family
+13,main,Animation
+14,main,Documentary
+15,main,Musical
+16,main,War
+17,main,Western
+18,main,History
+19,main,Biography
+20,main,Reality
+21,main,Talk Show
+22,main,Game Show
+23,main,Kids
+
+24,subgenres,Romantic Comedy
+25,subgenres,Dark Comedy
+26,subgenres,Satire
+27,subgenres,Spoof
+28,subgenres,Slapstick
+29,subgenres,Parody
+30,subgenres,Dramedy
+
+31,subgenres,Psychological Thriller
+32,subgenres,Crime Thriller
+33,subgenres,Legal Thriller
+34,subgenres,Political Thriller
+35,subgenres,Tech Thriller
+
+36,subgenres,Psychological Horror
+37,subgenres,Supernatural Horror
+38,subgenres,Body Horror
+39,subgenres,Found Footage
+40,subgenres,Slasher
+41,subgenres,Gothic Horror
+
+42,subgenres,Hard Science Fiction
+43,subgenres,Soft Science Fiction
+44,subgenres,Cyberpunk
+45,subgenres,Steampunk
+46,subgenres,Time Travel
+47,subgenres,Space Opera
+48,subgenres,Dystopian
+49,subgenres,Post-Apocalyptic
+
+50,subgenres,Dark Fantasy
+51,subgenres,Urban Fantasy
+52,subgenres,Epic Fantasy
+53,subgenres,Sword and Sorcery
+
+54,subgenres,Teen Drama
+55,subgenres,Melodrama
+56,subgenres,Coming of Age
+
+57,subgenres,Film Noir
+58,subgenres,Neo-Noir
+
+59,subgenres,Road Movie
+60,subgenres,Survival
+61,subgenres,Disaster
+
+62,subgenres,Heist
+63,subgenres,Gangster
+64,subgenres,Detective
+65,subgenres,Police Procedural
+
+66,subgenres,Legal Drama
+67,subgenres,Medical Drama
+68,subgenres,Political Drama
+
+69,subgenres,Supernatural
+70,subgenres,Paranormal
+
+71,subgenres,Biopic
+72,subgenres,Docudrama
+73,subgenres,Mockumentary
+74,subgenres,Docuseries
+75,subgenres,True Crime
+
+76,subgenres,Sports
+77,subgenres,Martial Arts
+78,subgenres,Superhero
+
+79,subgenres,Sitcom
+80,subgenres,Soap Opera
+81,subgenres,Telenovela
+
+82,subgenres,Reality Competition
+83,subgenres,Dating Show
+
+84,subgenres,Anime
+85,subgenres,Adult Animation
+
+86,other,Experimental
+87,other,Independent
+88,other,Art House
+89,other,Cult
+90,other,Silent Film
+91,other,Short Film
+92,other,Miniseries
+93,other,Limited Series
+94,other,Anthology
+95,other,Serialized
+96,other,Episodic
